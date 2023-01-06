@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family:  'Ubuntu', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eef5ff;
+}
+
+.container-flex {
+    display: flex;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 55rem;
+}
+
+/* styling for the side bar  */
+
+.sidebar {
+    width: 274px;
+    height: 568px;
+    background: url("assets/images/bg-sidebar-desktop.svg");
+}
+
+.step-1-flex, .step-2-flex, .step-3-flex, .step-4-flex {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.step-1-flex {
+    margin-top: 1rem;
+}
+
+.step1{
+    margin-left: 1rem;
+}
+
+.step1 h3 {
+    margin-top: 0;
+    color: white;
+}
+
+.step1 p {
+    margin-bottom: 0;
+    color: hsl(231, 11%, 63%);
+}
+
+.sidebar .btn-1 {
+    color: black;
+    background-color: white;
+}
+
+.sidebar button {
+    border-radius: 50%;
+    padding: 0.5rem 0.8rem;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
+/* end of side bar styling  */
+
+/* styling for the info section  */
+
+.info-container {
+    margin-left: 6rem;
+    margin-top: 1.2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-container h1, .select-plan h1 {
+    margin-bottom: 0;
+}
+
+.info-container p, .select-plan p {
+    margin-top: 0.5;
+    margin-bottom: 2rem;
+    color: hsl(231, 11%, 63%);
+}
+
+form span {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+form input {
+    margin-bottom: 1.5rem;
+    height: 2rem;
+    border-radius: 5px;
+    border: 1px solid hsl(232, 24%, 81%);
+    padding-left: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.form-btn {
+    width: 7rem;
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    color: white;
+    background-color: hsl(213, 96%, 18%);
+    margin-left: 74%;
+    margin-top: 8rem;
+}
+
+.active.info-container {
+    visibility: hidden;
+}
+/* end of styling for info section */
+
+/* styling for the plan section  */
+
+.select-plan {
+    position: absolute;
+    background-color: white;
+    margin-top: 1.2rem;
+    left: 45%;
+    padding-right: 1.2rem;
+}
+
+.cards-plan {
+    display: flex;
+}
+
+.arcade, .advanced, .pro {
+    height: 9rem;
+    width: 6rem;
+    border: 1px solid hsl(232, 24%, 81%);
+    border-radius: 10px;
+    padding: 1.5rem 1rem;
+}
+
+.advanced, .pro {
+    margin-left: 1rem;
+}
+
+.arcade h3, .advanced h3, .pro h3 {
+    margin-top: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+.arcade small, .advanced small, .pro small {
+    color: hsl(232, 24%, 81%);
+}
+
+.monthly-yearly-switch {
+    display: flex;
+    background-color: hsl(231, 100%, 99%);
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.monthly {
+    margin-right: 2rem;
+    padding-top: 1rem;
+}
+
+.yearly {
+    margin-left: 2rem;
+    padding-top: 1rem;
+}
+
+.label {
+    width: 2.2rem;
+    height: 1.1rem;
+    background-color: hsl(213, 96%, 18%);
+    position: absolute;
+    border-radius: 2rem;
+    left: 45%;
+}
+
+.circle {
+    width: 0.8rem;
+    height: 0.8rem;
+    top: 2px;
+    left: 2px;
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    animation: toggleOff 0.4s linear forwards;
+}
+
+#checkbox {
+    visibility: hidden;
+}
+
+.input:checked + .label .circle {
+    animation: toggleOn 0.4s linear forwards;
+}
+
+@keyframes toggleOn {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(1.1rem);
+    }
+    
+}
+
+@keyframes toggleOff {
+    0%{
+        transform: translateX(1.1rem);
+    }
+    100%{
+        transform: translateX(0);
+    }
+    
+}
+
+.backward {
+    text-decoration: none;
+    color: hsl(231, 11%, 63%);
+    position: absolute;
+    bottom: 2%;
+}
+
+.plan-btn {
+    width: 7rem;
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    color: white;
+    background-color: hsl(213, 96%, 18%);
+    margin-left: 78%;
+    margin-top: 8rem;
+}
+
+.active.select-plan {
+    visibility: hidden;
+}
+/* end of plan styling  */

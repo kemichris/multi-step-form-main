@@ -1,64 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <title>Frontend Mentor | Multi-step form</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <Main>
-    <div class="container-flex">
-      <div class="sidebar">
-        <div class="step-1-flex">
-          <button>1</button>
-          <div class="step1">
-            <p>STEP 1</p>
-            <h3>YOUR INFO</h3>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Multi-step form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container-flex">
+        <div class="sidebar">
+          <div class="step-1-flex">
+            <button class="btn-1">1</button>
+            <div class="step1">
+              <p>STEP 1</p>
+              <h3>YOUR INFO</h3>
+            </div>
           </div>
-        <div class="step-2-flex">
-          <button>2</button>
-          <div class="step1">
-            <p>STEP 2</p>
-            <h3>SELECT PLAN</h3>
+          <div class="step-2-flex">
+            <button>2</button>
+            <div class="step1">
+              <p>STEP 2</p>
+              <h3>SELECT PLAN</h3>
+            </div>
           </div>
-        <div class="step-3-flex">
-          <button>3</button>
-          <div class="step1">  
-            <p>STEP 3</p>
-            <h3>ADD-ONS</h3>
+          <div class="step-3-flex">
+            <button>3</button>
+            <div class="step1">
+              <p>STEP 3</p>
+              <h3>ADD-ONS</h3>
+            </div>
           </div>
-        <div class="step-1-flex">
-          <button>4</button>
-          <div class="step1">
-            <p>STEP 4</p>
-            <h3>SUMMARY</h3>
+          <div class="step-1-flex">
+            <button>4</button>
+            <div class="step1">
+              <p>STEP 4</p>
+              <h3>SUMMARY</h3>
+            </div>
           </div>
         </div>
-        
+
+        <div class="info-container">
+          <h1>Personal Info</h1>
+          <p>Please provide your name, email address and phone number.</p>
+          <form action="">
+            <span>Name</span>
+            <input type="text" placeholder="e.g. Stephen King" name="" id="" />
+            <span>Email Address</span>
+            <input type="email" name=""placeholder="e.g.  stephenking@lorem.com" id=""/>
+            <span>Phone Number</span>
+            <input type="tel" name="" placeholder="e.g. +234 567 890" id="" />
+
+            <button class="form-btn" type="submit">Next Step</button>
+          </form>
+        </div>
+        <div class="select-plan active">
+          <h1>Select your plan</h1>
+          <p>You have the option of monthly or yearly billing</p>
+          <div class="cards-plan">
+            <div class="arcade">
+              <img src="assets/images/icon-arcade.svg" alt="">
+              <h3>Arcade</h3>
+              <small>$9/mo</small>
+            </div>
+            <div class="advanced">
+              <img src="assets/images/icon-advanced.svg" alt="">
+              <h3>Advanced</h3>
+              <small>$12/mo</small>
+            </div>
+            <div class="pro">
+              <img src="assets/images/icon-pro.svg" alt="">
+              <h3>Pro</h3>
+              <small>$15/mo</small>
+            </div>
+          </div>
+          <div class="monthly-yearly-switch">
+            <p class="monthly">monthly</p>
+            <input class="input" type="checkbox" name="" id="checkbox">
+            <label class="label" for="checkbox"><div class="circle"></div></label>
+            <p class="yearly">Yearly</p>
+          </div>
+          <a class="backward" href="">Go back</a>
+          <button class="plan-btn" type="submit">Next Step</button>
+        </div>
       </div>
+    </main>
 
-      <div class="info-container">
-        <h1>Personal Info</h1>
-        <p>Please provide your name, email address and phone number.</p>
-        <form action="">
-          <span>Name</span>
-          <input type="text" placeholder="e.g. Stephen King" name="" id="">
-          <span>Email Address</span>
-          <input type="email" name="" placeholder="e.g.  stephenking@lorem.com" id="">
-          <span>Phone Number</span>
-          <input type="tel" name="" placeholder="e.g. +234 567 890" id="">
-
-          <button type="submit">Next Step</button>
-        </form>
-
-      </div>
-    </div>
-  </Main>
-
-
-  
-  <script src="index.js"></script>
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>
