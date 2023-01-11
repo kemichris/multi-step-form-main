@@ -17,6 +17,7 @@ body {
     padding: 1rem;
     border-radius: 10px;
     width: 55rem;
+    margin: 4rem;
 }
 
 /* styling for the side bar  */
@@ -78,11 +79,11 @@ form {
     flex-direction: column;
 }
 
-.info-container h1, .select-plan h1 {
+.info-container h1, .select-plan h1, .select-plan-yearly h1 {
     margin-bottom: 0;
 }
 
-.info-container p, .select-plan p {
+.info-container p, .select-plan p, .select-plan-yearly p {
     margin-top: 0.5;
     margin-bottom: 2rem;
     color: hsl(231, 11%, 63%);
@@ -120,7 +121,7 @@ form input {
 
 /* styling for the plan section  */
 
-.select-plan {
+.select-plan, .select-plan-yearly {
     position: absolute;
     background-color: white;
     margin-top: 1.2rem;
@@ -219,6 +220,7 @@ form input {
     
 }
 
+
 .backward {
     text-decoration: none;
     color: hsl(231, 11%, 63%);
@@ -239,4 +241,70 @@ form input {
 .active.select-plan {
     visibility: hidden;
 }
+/* yearly plan styling  */
+
+.select-plan-yearly .arcade h3, .select-plan-yearly .advanced h3, .select-plan-yearly .pro h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.select-plan-yearly .arcade p, .select-plan-yearly .advanced p, .select-plan-yearly .pro p {
+    margin-top: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.label-yearly {
+    width: 2.2rem;
+    height: 1.1rem;
+    background-color: hsl(213, 96%, 18%);
+    position: absolute;
+    border-radius: 2rem;
+    left: 45%;
+}
+
+.circle-yearly {
+    width: 0.8rem;
+    height: 0.8rem;
+    top: 2px;
+    left: 19px;
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    animation: toggleOff 0.4s linear forwards;
+}
+
+#checkbox-yearly {
+    visibility: hidden;
+}
+
+.input-yearly:checked + .label-yearly .circle-yearly {
+    animation: toggleOn 0.4s linear forwards;
+}
+
+@keyframes toggleOn {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-1rem);
+    }
+    
+}
+
+@keyframes toggleOff {
+    0%{
+        transform: translateX(-1.1rem);
+    }
+    100%{
+        transform: translateX(0);
+    }
+    
+}
+
+.active.select-plan-yearly {
+    visibility: hidden;
+}
 /* end of plan styling  */
+
+
