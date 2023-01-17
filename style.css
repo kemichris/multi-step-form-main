@@ -79,11 +79,11 @@ form {
     flex-direction: column;
 }
 
-.info-container h1, .select-plan h1, .select-plan-yearly h1 {
+.info-container h1, .select-plan h1, .select-plan-yearly h1, .add-ons-container h1, .add-ons-container-yearly h1 {
     margin-bottom: 0;
 }
 
-.info-container p, .select-plan p, .select-plan-yearly p {
+.info-container p, .select-plan p, .select-plan-yearly p, .add-ons-container p, .add-ons-container-yearly p {
     margin-top: 0.5;
     margin-bottom: 2rem;
     color: hsl(231, 11%, 63%);
@@ -121,7 +121,7 @@ form input {
 
 /* styling for the plan section  */
 
-.select-plan, .select-plan-yearly {
+.select-plan, .select-plan-yearly, .add-ons-container, .add-ons-container-yearly {
     position: absolute;
     background-color: white;
     margin-top: 1.2rem;
@@ -189,7 +189,7 @@ form input {
     position: absolute;
     background-color: white;
     border-radius: 50%;
-    animation: toggleOff 0.4s linear forwards;
+    animation: toggleOffs 0.4s linear forwards;
 }
 
 #checkbox {
@@ -197,10 +197,10 @@ form input {
 }
 
 .input:checked + .label .circle {
-    animation: toggleOn 0.4s linear forwards;
+    animation: toggleOns 0.4s linear forwards;
 }
 
-@keyframes toggleOn {
+@keyframes toggleOns {
     0%{
         transform: translateX(0);
     }
@@ -210,7 +210,7 @@ form input {
     
 }
 
-@keyframes toggleOff {
+@keyframes toggleOffs {
     0%{
         transform: translateX(1.1rem);
     }
@@ -306,5 +306,65 @@ form input {
     visibility: hidden;
 }
 /* end of plan styling  */
+
+/* styling for Add-ons section  */
+
+.add-ons-container {
+    width: 27.385rem;
+}
+
+.cards {
+    display: flex;
+    height: 3rem;
+    border-radius: 10px;
+    align-items: center;
+    border: 1px solid hsl(232, 24%, 81%);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cards input {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.card-text {
+    margin-left: 1rem;
+}
+
+.card-text h3 {
+    margin: 0;
+}
+
+.cards .card-text p {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    color: hsl(231, 11%, 63%);
+}
+
+.cards small {
+    margin-left: 6rem;
+}
+
+.add-ons-btn {
+    width: 7rem;
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    color: white;
+    background-color: hsl(213, 96%, 18%);
+    margin-left: 78%;
+    margin-top: 6rem;
+}
+
+.active.add-ons-container-yearly {
+    visibility: hidden;
+}
+
+.active.add-ons-container {
+    visibility: hidden;
+}
+
+
+
 
 
