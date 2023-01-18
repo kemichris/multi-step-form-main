@@ -52,16 +52,16 @@
           <p>Please provide your name, email address and phone number.</p>
           <form action="">
             <span>Name</span>
-            <input type="text" placeholder="e.g. Stephen King" name="" id="" />
+            <input type="text" required placeholder="e.g. Stephen King" name="" id="" />
             <span>Email Address</span>
-            <input
+            <input required
               type="email"
               name=""
               placeholder="e.g.  stephenking@lorem.com"
               id=""
             />
             <span>Phone Number</span>
-            <input type="tel" name="" placeholder="e.g. +234 567 890" id="" />
+            <input type="tel" name="" required placeholder="e.g. +234 567 890" id="" />
 
             <button class="form-btn" type="submit">Next Step</button>
           </form>
@@ -209,6 +209,37 @@
           </div>
           <a class="backward" href="">Go Back</a>
           <button class="add-ons-btn" type="submit">Next Step</button>
+        </div>
+
+        <!-- step 4 summarry  -->
+
+        <div class="summary-container active">
+          <h1>Finishing up</h1>
+          <p>Double-check everything looks OK beform confirming</p>
+
+          <div class="summary-card">
+            <div class="summary-card-content1">
+              <div class="text-content">
+                <h3>Arcade (Monthly)</h3>
+                <a href="">Change</a>
+              </div>
+              <small>$9/mo</small>
+            </div>
+            <div class="summary-card-content2">
+              <p>Online service</p>
+              <small>$1/mo</small>
+            </div>
+            <div class="summary-card-content3">
+              <p>Larger Storage</p>
+              <small>$2/mo</small>
+            </div>
+          </div>
+          <div class="total">
+            <p>Total (per month)</p>
+            <strong>+$12/mo</strong>
+          </div>
+          <a class="backward" href="">Go Back</a>
+          <button class="summary-btn" type="submit">Confirm</button>
         </div>
         
       </div>

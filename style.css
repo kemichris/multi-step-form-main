@@ -79,11 +79,11 @@ form {
     flex-direction: column;
 }
 
-.info-container h1, .select-plan h1, .select-plan-yearly h1, .add-ons-container h1, .add-ons-container-yearly h1 {
+.info-container h1, .select-plan h1, .select-plan-yearly h1, .add-ons-container h1, .add-ons-container-yearly h1, .summary-container h1 {
     margin-bottom: 0;
 }
 
-.info-container p, .select-plan p, .select-plan-yearly p, .add-ons-container p, .add-ons-container-yearly p {
+.info-container p, .select-plan p, .select-plan-yearly p, .add-ons-container p, .add-ons-container-yearly p, .summary-container p, .text-content a {
     margin-top: 0.5;
     margin-bottom: 2rem;
     color: hsl(231, 11%, 63%);
@@ -121,7 +121,7 @@ form input {
 
 /* styling for the plan section  */
 
-.select-plan, .select-plan-yearly, .add-ons-container, .add-ons-container-yearly {
+.select-plan, .select-plan-yearly, .add-ons-container, .add-ons-container-yearly, .summary-container {
     position: absolute;
     background-color: white;
     margin-top: 1.2rem;
@@ -309,7 +309,7 @@ form input {
 
 /* styling for Add-ons section  */
 
-.add-ons-container {
+.add-ons-container, .summary-container {
     width: 27.385rem;
 }
 
@@ -363,8 +363,66 @@ form input {
 .active.add-ons-container {
     visibility: hidden;
 }
+/* end of add-ons styling  */
 
+/* styling for summary  */
 
+.summary-card {
+    background-color: hsl(231, 100%, 99%);
+    border-radius: 10px;
+    padding: 0 1rem;
+}
 
+.summary-card-content1, .summary-card-content2, .summary-card-content3 {
+    background-color: hsl(231, 100%, 99%);
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.summary-card-content1 h3 {
+    margin: 0 0 0.5rem;
+}
+
+.summary-card-content1 small {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.summary-card-content2, .summary-card-content3 {
+    height: 1rem;
+}
+
+.summary-card-content2 {
+    border-top: 1px solid hsl(232, 24%, 81%);
+    border-radius: 0;
+}
+
+.total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.total strong {
+    color: hsl(243, 100%, 62%);
+}
+
+.summary-btn {
+    width: 7rem;
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    background-color: hsl(243, 100%, 62%);
+    margin-left: 78%;
+    margin-top: 9.5rem;
+}
+
+.active.summary-container {
+    visibility: hidden;
+}
 
