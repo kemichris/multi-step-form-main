@@ -18,28 +18,28 @@
       <div class="container-flex">
         <div class="sidebar">
           <div class="step-1-flex">
-            <button class="btn-1">1</button>
+            <button class="sidebar-btn-active" id="step-1">1</button>
             <div class="step1">
               <p>STEP 1</p>
               <h3>YOUR INFO</h3>
             </div>
           </div>
           <div class="step-2-flex">
-            <button>2</button>
+            <button id="step-2">2</button>
             <div class="step1">
               <p>STEP 2</p>
               <h3>SELECT PLAN</h3>
             </div>
           </div>
           <div class="step-3-flex">
-            <button>3</button>
+            <button id="step-3">3</button>
             <div class="step1">
               <p>STEP 3</p>
               <h3>ADD-ONS</h3>
             </div>
           </div>
           <div class="step-1-flex">
-            <button>4</button>
+            <button id="step-4">4</button>
             <div class="step1">
               <p>STEP 4</p>
               <h3>SUMMARY</h3>
@@ -52,18 +52,18 @@
           <p>Please provide your name, email address and phone number.</p>
           <form action="">
             <span>Name</span>
-            <input type="text" required placeholder="e.g. Stephen King" name="" id="" />
+            <input type="text" required placeholder="e.g. Stephen King" name="" id="name-input" />
             <span>Email Address</span>
             <input required
               type="email"
               name=""
               placeholder="e.g.  stephenking@lorem.com"
-              id=""
+              id="email-input"
             />
             <span>Phone Number</span>
-            <input type="tel" name="" required placeholder="e.g. +234 567 890" id="" />
+            <input type="tel" name="" required placeholder="e.g. +234 567 890" id="number-input" />
 
-            <button class="form-btn" type="submit">Next Step</button>
+            <button type="submit" class="form-btn" id="form-next">Next Step</button>
           </form>
         </div>
 
@@ -73,51 +73,51 @@
           <h1>Select your plan</h1>
           <p>You have the option of monthly or yearly billing</p>
           <div class="cards-plan">
-            <div class="arcade">
+            <div class="arcade" id="arcade-monthly">
               <img src="assets/images/icon-arcade.svg" alt="" />
               <h3>Arcade</h3>
               <small>$9/mo</small>
             </div>
-            <div class="advanced">
+            <div class="advanced" id="advanced-monthly">
               <img src="assets/images/icon-advanced.svg" alt="" />
               <h3>Advanced</h3>
               <small>$12/mo</small>
             </div>
-            <div class="pro">
+            <div class="pro" id="pro-monthly">
               <img src="assets/images/icon-pro.svg" alt="" />
               <h3>Pro</h3>
               <small>$15/mo</small>
             </div>
           </div>
           <div class="monthly-yearly-switch">
-            <p class="monthly">monthly</p>
+            <p class="monthly" id="monthly">monthly</p>
             <input class="input" type="checkbox" name="" id="checkbox" />
             <label class="label" for="checkbox"
               ><div class="circle"></div
             ></label>
             <p class="yearly">Yearly</p>
           </div>
-          <a class="backward" href="">Go back</a>
-          <button class="plan-btn" type="submit">Next Step</button>
+          <a class="backward" href="" id="plan-backward-mt">Go back</a>
+          <button class="plan-btn" type="submit" id="plan-next-mt">Next Step</button>
         </div>
 
         <div class="select-plan-yearly active">
           <h1>Select your plan</h1>
           <p>You have the option of monthly or yearly billing</p>
           <div class="cards-plan">
-            <div class="arcade">
+            <div class="arcade" id="arcade-yearly">
               <img src="assets/images/icon-arcade.svg" alt="" />
               <h3>Arcade</h3>
               <small>$90/yr</small>
               <p>2 months free</p>
             </div>
-            <div class="advanced">
+            <div class="advanced" id="advanced-yearly">
               <img src="assets/images/icon-advanced.svg" alt="" />
               <h3>Advanced</h3>
               <small>$120/yr</small>
               <p>2 months free</p>
             </div>
-            <div class="pro">
+            <div class="pro" id="pro-yearly">
               <img src="assets/images/icon-pro.svg" alt="" />
               <h3>Pro</h3>
               <small>$150/yr</small>
@@ -135,10 +135,10 @@
             <label class="label-yearly" for="checkbox-yearly"
               ><div class="circle-yearly"></div
             ></label>
-            <p class="yearly">Yearly</p>
+            <p class="yearly" id="yearly">Yearly</p>
           </div>
-          <a class="backward" href="">Go back</a>
-          <button class="plan-btn" type="submit">Next Step</button>
+          <a class="backward" href="#" id="plan-backward-yr">Go back</a>
+          <button class="plan-btn" type="submit" id="plan-next-yr">Next Step</button>
         </div>
 
         <!-- Step 3 add ons  -->
@@ -149,7 +149,7 @@
 
           <div class="add-ons-card-plan">
             <div class="cards">
-              <input type="checkbox" name="" id="" />
+              <input type="checkbox" name="" id="online-service-mt" />
               <div class="card-text">
                 <h3>Online service</h3>
                 <p>Access to multiplayer games</p>
@@ -157,7 +157,7 @@
               <small>+$1/mo</small>
             </div>
             <div class="cards">
-              <input type="checkbox" name="" id="" />
+              <input type="checkbox" name="" id="Storage-mt" />
               <div class="card-text">
                 <h3>Larger storage</h3>
                 <p>Extra 1TB of cloud save</p>
@@ -165,7 +165,7 @@
               <small>+$2/mo</small>
             </div>
             <div class="cards">
-              <input type="checkbox" name="" id="" />
+              <input type="checkbox" name="" id="custom-profile-mt" />
               <div class="card-text">
                 <h3>Customizable profile</h3>
                 <p>Custom theme on your profile</p>
@@ -173,8 +173,8 @@
               <small>+$2/mo</small>
             </div>
           </div>
-          <a class="backward" href="">Go Back</a>
-          <button class="add-ons-btn" type="submit">Next Step</button>
+          <a class="backward" href="#" id="add-ons-back_monthly">Go Back</a>
+          <button class="add-ons-btn" type="submit" id="add-ons-next_monthly">Next Step</button>
         </div>
 
         <div class="add-ons-container-yearly active">
@@ -183,7 +183,7 @@
 
           <div class="add-ons-card-plan">
             <div class="cards">
-              <input type="checkbox" name="" id="" />
+              <input type="checkbox" name="" id="online-service-yr" />
               <div class="card-text">
                 <h3>Online service</h3>
                 <p>Access to multiplayer games</p>
@@ -191,7 +191,7 @@
               <small>+$10/yr</small>
             </div>
             <div class="cards">
-              <input type="checkbox" name="" id="" />
+              <input type="checkbox" name="" id="Storage-yr" />
               <div class="card-text">
                 <h3>Larger storage</h3>
                 <p>Extra 1TB of cloud save</p>
@@ -199,7 +199,7 @@
               <small>+$20/yr</small>
             </div>
             <div class="cards">
-              <input type="checkbox" name="" id="" />
+              <input type="checkbox" name="" id="custom-profile-yr" />
               <div class="card-text">
                 <h3>Customizable profile</h3>
                 <p>Custom theme on your profile</p>
@@ -207,8 +207,8 @@
               <small>+$20/yr</small>
             </div>
           </div>
-          <a class="backward" href="">Go Back</a>
-          <button class="add-ons-btn" type="submit">Next Step</button>
+          <a class="backward" href="" id="add-ons-back_yearly">Go Back</a>
+          <button class="add-ons-btn" type="submit" id="add-ons-next_yearly">Next Step</button>
         </div>
 
         <!-- step 4 summarry  -->
@@ -220,28 +220,39 @@
           <div class="summary-card">
             <div class="summary-card-content1">
               <div class="text-content">
-                <h3>Arcade (Monthly)</h3>
-                <a href="">Change</a>
+                <h3 id="plan-text">Arcade (Monthly)</h3>
+                <a href="#" id="change-plan">Change</a>
               </div>
-              <small>$9/mo</small>
+              <small id="plan-price">$9/mo</small>
             </div>
             <div class="summary-card-content2">
-              <p>Online service</p>
-              <small>$1/mo</small>
+              <p id="online-service-text">Online service</p>
+              <small id="online-service-price">$1/mo</small>
             </div>
             <div class="summary-card-content3">
-              <p>Larger Storage</p>
-              <small>$2/mo</small>
+              <p id="storage-text">Larger Storage</p>
+              <small id="storage-price">$2/mo</small>
+            </div>
+            <div class="summary-card-content4">
+              <p id="custom-text">Customizable profile</p>
+              <small id="custom-price">$2/mo</small>
             </div>
           </div>
           <div class="total">
             <p>Total (per month)</p>
-            <strong>+$12/mo</strong>
+            <strong id="total">+$12/mo</strong>
           </div>
-          <a class="backward" href="">Go Back</a>
-          <button class="summary-btn" type="submit">Confirm</button>
+          <a class="backward" href="#" id="sum-back">Go Back</a>
+          <button class="summary-btn" type="submit" id="sum-confirm">Confirm</button>
         </div>
+
+        <!-- thank you section  -->
         
+        <div class="thank-you-container active">
+          <img src="assets/images/icon-thank-you.svg" alt="">
+          <h1>Thank you!</h1>
+          <p>Thanks for confirming your subscription! We hope you have fun using or platform. If you ever need support, please feel free to eamil us at support@loremgaming.com</p>
+        </div>
       </div>
     </main>
 

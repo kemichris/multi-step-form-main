@@ -52,7 +52,7 @@ body {
     color: hsl(231, 11%, 63%);
 }
 
-.sidebar .btn-1 {
+.sidebar .sidebar-btn-active {
     color: black;
     background-color: white;
 }
@@ -72,6 +72,7 @@ body {
 .info-container {
     margin-left: 6rem;
     margin-top: 1.2rem;
+    transition: opacity 1s;
 }
 
 form {
@@ -81,9 +82,10 @@ form {
 
 .info-container h1, .select-plan h1, .select-plan-yearly h1, .add-ons-container h1, .add-ons-container-yearly h1, .summary-container h1 {
     margin-bottom: 0;
+    color: hsl(213, 96%, 18%);;
 }
 
-.info-container p, .select-plan p, .select-plan-yearly p, .add-ons-container p, .add-ons-container-yearly p, .summary-container p, .text-content a {
+.info-container p, .select-plan p, .select-plan-yearly p, .add-ons-container p, .add-ons-container-yearly p, .summary-container p, .text-content a, .thank-you-container p {
     margin-top: 0.5;
     margin-bottom: 2rem;
     color: hsl(231, 11%, 63%);
@@ -116,17 +118,19 @@ form input {
 
 .active.info-container {
     visibility: hidden;
+    opacity: 0;
 }
 /* end of styling for info section */
 
 /* styling for the plan section  */
 
-.select-plan, .select-plan-yearly, .add-ons-container, .add-ons-container-yearly, .summary-container {
+.select-plan, .select-plan-yearly, .add-ons-container, .add-ons-container-yearly, .summary-container, .thank-you-container {
     position: absolute;
     background-color: white;
     margin-top: 1.2rem;
     left: 45%;
     padding-right: 1.2rem;
+    transition: opacity 1s;
 }
 
 .cards-plan {
@@ -139,6 +143,15 @@ form input {
     border: 1px solid hsl(232, 24%, 81%);
     border-radius: 10px;
     padding: 1.5rem 1rem;
+    cursor: pointer;
+}
+
+.active.arcade, .active.advanced, .active.pro {
+    background-color: hsl(206, 94%, 87%);
+}
+
+.arcade:hover, .advanced:hover, .pro:hover {
+    border: 2px solid hsl(206, 94%, 87%);
 }
 
 .advanced, .pro {
@@ -147,6 +160,7 @@ form input {
 
 .arcade h3, .advanced h3, .pro h3 {
     margin-top: 4rem;
+    color: hsl(213, 96%, 18%);;
     margin-bottom: 0.5rem;
 }
 
@@ -156,20 +170,33 @@ form input {
 
 .monthly-yearly-switch {
     display: flex;
-    background-color: hsl(231, 100%, 99%);
+    background-color: hsl(206, 94%, 87%);
     height: 2rem;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
 }
+
 .monthly {
     margin-right: 2rem;
     padding-top: 1rem;
+    font-weight: bold;
+    
 }
+
+#monthly {
+    color: hsl(213, 96%, 18%);
+}
+
 
 .yearly {
     margin-left: 2rem;
     padding-top: 1rem;
+    font-weight: bold;
+}
+
+#yearly {
+    color: hsl(213, 96%, 18%);
 }
 
 .label {
@@ -240,6 +267,7 @@ form input {
 
 .active.select-plan {
     visibility: hidden;
+    opacity: 0;
 }
 /* yearly plan styling  */
 
@@ -304,12 +332,13 @@ form input {
 
 .active.select-plan-yearly {
     visibility: hidden;
+    opacity: 0;
 }
 /* end of plan styling  */
 
 /* styling for Add-ons section  */
 
-.add-ons-container, .summary-container {
+.add-ons-container, .summary-container, .thank-you-container {
     width: 27.385rem;
 }
 
@@ -334,6 +363,7 @@ form input {
 
 .card-text h3 {
     margin: 0;
+    color: hsl(213, 96%, 18%);
 }
 
 .cards .card-text p {
@@ -362,6 +392,7 @@ form input {
 
 .active.add-ons-container {
     visibility: hidden;
+    opacity: 0;
 }
 /* end of add-ons styling  */
 
@@ -373,7 +404,7 @@ form input {
     padding: 0 1rem;
 }
 
-.summary-card-content1, .summary-card-content2, .summary-card-content3 {
+.summary-card-content1, .summary-card-content2, .summary-card-content3, .summary-card-content4 {
     background-color: hsl(231, 100%, 99%);
     padding: 1rem;
     border-radius: 10px;
@@ -384,11 +415,13 @@ form input {
 
 .summary-card-content1 h3 {
     margin: 0 0 0.5rem;
+    color: hsl(213, 96%, 18%);
 }
 
 .summary-card-content1 small {
     font-weight: bold;
     font-size: 1rem;
+    color: hsl(213, 96%, 18%);
 }
 
 .summary-card-content2, .summary-card-content3 {
@@ -419,10 +452,31 @@ form input {
     border: none;
     background-color: hsl(243, 100%, 62%);
     margin-left: 78%;
-    margin-top: 9.5rem;
+    margin-top: 3rem;
 }
 
 .active.summary-container {
     visibility: hidden;
+    opacity: 0;
+}
+/* end of styling for the summary section  */
+
+/* styling for the thank you section  */
+
+.thank-you-container {
+    height: 34.567rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.thank-you-container p {
+    text-align: center;
+}
+
+.active.thank-you-container {
+    visibility: hidden;
+    opacity: 0;
 }
 
