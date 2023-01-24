@@ -80,8 +80,13 @@ addonBackwardMonthly.addEventListener("click", openStep2);
 addonNextYearly.addEventListener("click", openStep4);
 addonBackwardYearly.addEventListener("click", openStep2);
 summaryBackward.addEventListener("click", openStep3);
-summaryConfirm.addEventListener("click", thankYou)
-changePlan.addEventListener("click", openStep2);
+summaryConfirm.addEventListener("click", thankYou);
+changePlan.addEventListener("click", () =>  {
+    openStep2()
+    onlineservAddonMonthly.checked = false;
+    storageservAddonMonthly.checked = false;
+    customservAddonMonthly.checked = false;
+});
 
 
 arcadeMonthly.addEventListener("click", () => {
@@ -249,7 +254,7 @@ function openStep1() {
 }
 
 function openStep2() {
-    infoContainer.classList.add("active")
+    infoContainer.classList.add("active");
     planContainerYearly.classList.add("active");
     addOnsContainerMonthly.classList.add("active");
     addOnsContainerYearly.classList.add("active");
@@ -264,7 +269,7 @@ function openStep2() {
 }
 function openStep2Monthly() {
     if (checkboxYearly.checked) {
-        infoContainer.classList.add("active")
+        infoContainer.classList.add("active");
         planContainerYearly.classList.add("active");
         addOnsContainerMonthly.classList.add("active");
         addOnsContainerYearly.classList.add("active");
@@ -282,7 +287,7 @@ function openStep2Monthly() {
 
 function openStep2yearly() {
     if (checkBoxMonthly.checked) {
-        infoContainer.classList.add("active")
+        infoContainer.classList.add("active");
         planContainerMonthly.classList.add("active");
         addOnsContainerMonthly.classList.add("active");
         addOnsContainerYearly.classList.add("active");
@@ -300,7 +305,7 @@ function openStep2yearly() {
 
 function openStep3() {
     if (checkBoxMonthly.checked) {
-        infoContainer.classList.add("active")
+        infoContainer.classList.add("active");
         planContainerMonthly.classList.add("active");
         planContainerYearly.classList.add("active");
         addOnsContainerMonthly.classList.add("active");
@@ -312,7 +317,7 @@ function openStep3() {
         step4Btn.classList.remove("sidebar-btn-active");
         step3Btn.classList.add("sidebar-btn-active");
     } else {
-        infoContainer.classList.add("active")
+        infoContainer.classList.add("active");
         planContainerMonthly.classList.add("active");
         planContainerYearly.classList.add("active");
         addOnsContainerYearly.classList.add("active");
@@ -329,7 +334,7 @@ function openStep3() {
 }
 
 function openStep4() {
-    infoContainer.classList.add("active")
+    infoContainer.classList.add("active");
     planContainerMonthly.classList.add("active");
     planContainerYearly.classList.add("active");
     addOnsContainerMonthly.classList.add("active");
@@ -343,7 +348,7 @@ function openStep4() {
     }
 
     function thankYou() {
-        infoContainer.classList.add("active")
+        infoContainer.classList.add("active");
         planContainerMonthly.classList.add("active");
         planContainerYearly.classList.add("active");
         addOnsContainerMonthly.classList.add("active");
@@ -354,5 +359,5 @@ function openStep4() {
         step3Btn.classList.remove("sidebar-btn-active");
         step4Btn.classList.remove("sidebar-btn-active");
         thankYouContainer.classList.remove("active");
-        }
+    }
 
